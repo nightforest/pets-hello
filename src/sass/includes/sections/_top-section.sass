@@ -1,0 +1,116 @@
+.top-section
+    position: relative
+    padding: 50px 0 40px
+    min-height: calc(100vh - 120px)
+    background: var(--blue)
+    z-index: $z-index-0
+    display: flex
+    width: 100%
+
+    @media ($max-xxl)
+        padding-bottom: 0
+
+    @media ($max-lg)
+        padding: 50px 0 40px
+
+    @media ($max-md)
+        min-height: 0
+
+    &__left-bg
+        position: absolute
+        bottom: 0
+        left: 0
+        display: flex
+        z-index: $z-index-minus
+        overflow: hidden
+
+        @media ($max-md)
+            display: none
+
+    &__right-bg
+        position: absolute
+        bottom: 0
+        right: 0
+        display: flex
+        z-index: $z-index-minus
+
+        @media ($max-md)
+            display: none
+
+    &__container
+        flex: 1
+        display: flex
+        flex-direction: column
+    
+    &__header
+        text-align: center
+        margin: auto 0
+
+        @media ($max-lg)
+            margin-bottom: 60px
+
+        @media ($max-md)
+            margin-bottom: 45px
+    
+    &__title
+        margin: 0 0 12px
+        font-size: 75px
+        font-weight: 300
+        line-height: 1.15
+
+        @media ($max-lg)
+            font-size: 45px
+
+        @media ($max-md)
+            font-size: 36px
+
+        span
+            display: block
+            color: var(--white)
+
+    &__line
+        position: relative
+        margin: 0 auto 10px
+        max-width: 400px
+        color: var(--white)
+
+        @media ($max-lg)
+            max-width: 330px
+
+        @media ($max-md)
+            max-width: 270px
+
+        &:before
+            position: absolute
+            top: 50%
+            left: 0
+            margin-top: -1px
+            height: 2px
+            width: calc(50% - 35px)
+            background: var(--white)
+            content: ""
+        
+        &:after
+            position: absolute
+            top: 50%
+            right: 0
+            margin-top: -1px
+            height: 2px
+            width: calc(50% - 35px)
+            background: var(--white)
+            content: ""
+
+    &__slogan
+        margin: 0
+        font-weight: 300
+        font-size: 40px
+        line-height: 1.2
+
+        @media ($max-lg)
+            font-size: 32px
+
+        @media ($max-md)
+            font-size: 26px
+
+    &__search
+        margin-top: 30px

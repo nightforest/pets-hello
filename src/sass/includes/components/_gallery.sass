@@ -1,0 +1,94 @@
+.gallery
+    position: relative
+    border-radius: 10px
+    border: 1px solid #E2E2E2
+    background: var(--white)
+    height: 100%
+    padding: 70px 0 30px
+
+    @media ($max-md)
+        padding: 15px 0
+
+    &-slider
+        margin: 0 80px 30px
+        border-radius: 5px
+        overflow: hidden
+
+        @media ($max-md)
+            margin: 0 15px 15px
+
+        &__picture
+            display: flex
+            width: 100%
+            height: 435px
+
+            @media ($max-md)
+                height: 210px
+        
+        &__img
+            width: 100%
+            height: 100%
+            object-fit: cover
+        
+        &__prev,
+        &__next
+            position: absolute
+            top: 40%
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 50px
+            height: 50px
+            background: var(--blue)
+            color: var(--white)
+            border-radius: 5px
+            z-index: $z-index-1
+            transition: all .5s ease
+
+            @media ($max-md)
+                width: 34px
+                height: 34px
+                top: 105px
+
+            &.swiper-button-disabled
+                opacity: 0
+                visibility: hidden
+
+            &:hover,
+            &:active,
+            &:focus-visible
+                background: var(--yellow)
+
+        &__prev
+            left: 15px
+
+            @media ($max-md)
+                left: -10px
+
+        &__next
+            right: 15px
+
+            @media ($max-md)
+                right: -10px
+
+    &-thumbs
+        padding: 0 15px
+
+        &__slide
+            border-radius: 5px
+            overflow: hidden
+            transition: opacity .5s ease
+            cursor: pointer
+
+            &.swiper-slide-thumb-active
+                opacity: .5
+        
+        &__picture
+            display: flex
+            width: 100%
+            height: 100%
+        
+        &__img
+            width: 100%
+            height: 100%
+            object-fit: cover

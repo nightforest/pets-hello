@@ -1,0 +1,69 @@
+.error-section
+    position: relative
+    flex: 1
+    display: flex
+    align-items: center
+    width: 100%
+    padding: 120px 0
+    background: var(--light-blue)
+    z-index: 0
+
+    @media ($max-md)
+        padding: 60px 0 270px
+
+    &__bg
+        position: absolute
+        bottom: 0
+        right: 0
+        display: flex
+        z-index: -1
+        max-width: 55%
+
+        @media ($max-md)
+            max-width: 100%
+            height: 230px
+            width: 100%
+            display: flex
+            justify-content: flex-end
+
+        &-img
+            max-width: 100%
+            height: auto
+
+            @media ($max-md)
+                width: auto
+
+    &__content
+        max-width: 415px
+        text-align: center
+
+        @media ($max-lg)
+            max-width: 230px
+
+        @media ($max-md)
+            margin: 0 auto
+
+    &__icon
+        margin-bottom: 30px
+        max-width: 100%
+        height: auto
+
+        @media ($max-lg)
+            max-width: 227px
+            margin-bottom: 15px
+
+    &__title
+        margin: 0 0 30px
+        line-height: 1.2
+        font-size: 60px
+        font-weight: 200
+
+        @media ($max-lg)
+            font-size: 34px
+
+    &__button
+        max-width: 255px
+        width: 100%
+
+        @media ($max-lg)
+            max-width: 100%

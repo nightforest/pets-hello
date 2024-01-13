@@ -1,0 +1,67 @@
+.actions
+
+    &__list
+        display: flex
+        align-items: center
+        gap: 55px
+        margin: 0
+        padding: 0
+        list-style: none
+
+        @media ($max-xl)
+            gap: 20px
+
+    &__item
+
+        &--hidden-lg
+
+            @media ($max-lg)
+                display: none
+
+    &__button
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 15px
+        width: auto
+        height: 30px
+        border: none
+        color: var(--black)
+        font-size: 18px
+        font-weight: 700
+        transition: all .5s ease
+
+        @media ($max-lg)
+            width: 65px
+            height: 65px
+            min-width: 65px
+            border: 2px solid var(--black)
+            border-radius: 10px
+
+        @media ($max-md)
+            width: 40px
+            height: 40px
+            min-width: 40px
+            border-width: 1px
+            border-radius: 5px
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--blue)
+
+            @media ($max-lg)
+                border-color: var(--blue)
+                background: var(--blue)
+                color: var(--black)
+
+    &__icon
+
+        @media ($max-md)
+            width: 21px
+            height: 21px
+            
+    &__title
+
+        @media ($max-lg)
+            display: none

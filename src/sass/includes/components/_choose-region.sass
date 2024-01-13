@@ -1,0 +1,128 @@
+.choose-region
+    border-radius: 10px
+    background: var(--white)
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .15)
+    padding: 25px
+
+    @media ($max-md)
+        padding: 35px 15px 20px
+
+    &__inner
+        display: flex
+        align-items: flex-start
+        gap: 40px
+
+        @media ($max-md)
+            flex-direction: column
+            gap: 0
+
+    &__picture
+        display: flex
+        max-width: 390px
+        width: 100%
+
+        @media ($max-lg)
+            max-width: 320px
+
+        @media ($max-md)
+            max-width: 100%
+    
+    &__img
+        max-width: 100%
+        height: auto
+
+        @media ($max-md)
+            width: 100%
+            height: auto
+    
+    &__content
+        width: 100%
+
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 10px
+        margin-bottom: 20px
+
+        @media ($max-md)
+            flex-direction: column
+            text-align: center
+            gap: 15px
+            margin-bottom: 40px
+
+        &--hidden-lg
+
+            @media ($max-lg)
+                display: none
+
+        &--visible-lg
+            display: none
+
+            @media ($max-lg)
+                display: flex
+    
+    &__title
+        line-height: 1.2
+
+    &__list
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 15px
+        margin: 0
+        padding: 0
+        list-style: none
+
+        @media ($max-md)
+            gap: 12px
+    
+    &__item
+        grid-column: 4 span
+
+        @media ($max-lg)
+            grid-column: 6 span
+
+    &__link
+        font-size: 20px
+        font-weight: 300
+        color: var(--black)
+        transition: color .5s ease
+
+        @media ($max-md)
+            font-size: 16px
+            font-weight: 300
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--blue)
+
+    &__more-link
+        display: inline-flex
+        align-items: center
+        gap: 8px
+        font-size: 20px
+        font-weight: 300
+        color: var(--blue)
+        transition: color .5s ease
+
+        @media ($max-md)
+            font-size: 16px
+            font-weight: 300
+
+        span
+            border-bottom: 1px solid var(--blue)
+            transition: border-color .5s ease
+
+        svg
+
+            @media ($max-md)
+                width: 6px
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--yellow)
+
+            span
+                border-color: transparent

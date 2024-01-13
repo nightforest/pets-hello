@@ -1,0 +1,78 @@
+.anti-scam-section
+    padding: 70px 0
+
+    @media ($max-lg)
+        padding: 45px 0 50px
+
+    @media ($max-md)
+        padding: 40px 0
+
+    &__title
+        margin: 0 0 1rem
+        font-size: 20px
+        font-weight: 700
+        text-align: center
+
+        @media ($max-lg)
+            font-size: 16px
+
+        @media ($max-md)
+            font-size: 14px
+            margin-bottom: .5rem
+
+    &__text
+        margin-bottom: 30px
+        font-size: 20px
+        text-align: center
+
+        @media ($max-lg)
+            font-size: 16px
+
+        @media ($max-md)
+            font-size: 14px
+
+        p
+
+            @media ($max-md)
+                margin-bottom: .5rem
+
+            &:last-child
+                margin-bottom: 0
+
+                @media ($max-md)
+                    margin-bottom: 0
+
+    &__list
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 30px
+        margin: 0
+        padding: 0
+        list-style: none
+
+        @media ($max-md)
+            display: flex
+            flex-direction: column
+            gap: 20px
+
+    &__item
+        grid-column: 6 span
+        background: var(--light-blue)
+        border-radius: 10px
+        padding: 30px
+
+        @media ($max-lg)
+            padding: 25px 15px
+
+    &__sub-title
+        font-size: 24px
+        margin: 0 0 10px
+
+        @media ($max-lg)
+            font-size: 20px
+
+    &__check-list
+        font-size: 18px
+
+        @media ($max-lg)
+            font-size: 14px

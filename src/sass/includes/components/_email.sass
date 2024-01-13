@@ -1,0 +1,28 @@
+.email
+
+    &__link
+        display: inline-flex
+        align-items: center
+        gap: 7px
+        font-size: 18px
+        color: var(--black)
+        transition: all .5s ease
+
+        @media ($max-lg)
+            font-size: 16px
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--yellow)
+
+    &__pic
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 40px
+        height: 40px
+        min-width: 40px
+        background: var(--yellow)
+        border-radius: 5px
+        color: var(--black)

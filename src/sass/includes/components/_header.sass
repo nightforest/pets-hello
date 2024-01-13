@@ -1,0 +1,91 @@
+.header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background: var(--white)
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .05)
+    z-index: $z-index-3
+    
+    &__container
+        display: flex
+        align-items: center
+        gap: 30px
+        padding: 0 15px
+
+        @media ($max-xl)
+            gap: 20px
+
+        @media ($max-lg)
+            gap: 30px
+
+        @media ($max-md)
+            gap: 10px
+            padding: 0 15px
+
+    &__logo
+        margin-right: auto
+
+        @media ($max-md)
+            margin-left: -15px
+
+        .logo__link
+            background: var(--yellow)
+            height: 120px
+            padding: 10px 15px
+
+            @media ($max-lg)
+                height: 115px
+
+            @media ($max-md)
+                height: 80px
+
+    &__lang-button
+        margin-right: 25px
+        padding: 5px 15px
+        text-transform: uppercase
+
+        @media ($max-xl)
+            margin-right: 0
+
+        @media ($max-lg)
+            padding: 5px
+            width: 65px
+            min-width: 65px
+            gap: 5px
+            margin-right: 0
+
+        @media ($max-md)
+            width: 40px
+            height: 40px
+            min-width: 40px
+            border-width: 1px
+            border-radius: 5px
+            font-size: 14px
+            gap: 3px
+            padding: 3px
+
+    &__create-button
+
+        @media ($max-lg)
+            flex-direction: column
+            max-width: 115px
+            gap: 0
+
+        @media ($max-md)
+            width: 40px
+            height: 40px
+            max-width: 40px
+            padding: 5px
+            border-radius: 5px
+
+        span
+
+            @media ($max-md)
+                display: none
+
+    &__actions
+        margin-right: 25px
+        
+        @media ($max-xl)
+            margin-right: 0

@@ -1,0 +1,42 @@
+section.top-section
+    picture.top-section__left-bg
+        source(srcset="img/top-bg-left-mob@2x.webp 2x, img/top-bg-left-mob.webp" width="185" height="645" media="(max-width: 991.98px)")
+        img.top-section__left-bg-img(src="img/top-bg-left.webp" srcset="img/top-bg-left@2x.webp 2x" loading="lazy" width="405" height="831"  alt="alt")
+    
+    picture.top-section__right-bg
+        source(srcset="img/top-bg-right-mob@2x.webp 2x, img/top-bg-right-mob.webp" width="231" height="637" media="(max-width: 991.98px)")
+        img.top-section__right-bg-img(src="img/top-bg-right.webp" srcset="img/top-bg-right@2x.webp 2x" loading="lazy" width="682" height="829"  alt="alt")
+
+    .container.top-section__container
+        .top-section__header
+            h1.top-section__title Sell and Buy
+            .top-section__line
+                svg.top-section__line-icon(width="32" height="27")
+                    use(xlink:href="img/sprite.svg#paw")
+
+            p.top-section__slogan Easy, fast and efficient
+
+        .search.top-section__search
+            form.search__form(id="search-form" autocomplete="off" novalidate="novalidate")
+                .search__group
+                    select#selectCategory.select(name="selectCategory" aria-label="Category" required)
+                        option(value="") Category
+                        option(value="1") Cats
+                        option(value="2") Dogs
+                        option(value="3") Horses
+                        option(value="4") Other Pets
+                        option(value="5") Accessoires
+                        option(value="6") Pet Food
+                        option(value="7") Service
+                        option(value="8") Lost Animal
+
+                .search__group
+                    input#inputWhat.input.search__input(type="text" name="inputWhat" placeholder="What?" autocomplete="off" required)
+
+                .search__group
+                    input#inputWhere.input.input--location.search__input(type="text" name="inputWhere" placeholder="Where?" autocomplete="off" required)
+
+                .search__group
+                    button.button.search__button Search
+                        svg.button__icon(width="22" height="22")
+                            use(xlink:href="img/sprite.svg#search")

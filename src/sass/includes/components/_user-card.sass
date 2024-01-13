@@ -1,0 +1,179 @@
+.user-card
+    border-radius: 10px
+    border: 1px solid #E2E2E2
+    background: var(--white)
+    padding: 20px
+    
+    @media ($max-md)
+        padding: 15px
+
+    &__header
+        position: relative
+        display: flex
+        align-items: flex-start
+        gap: 15px
+        padding-bottom: 12px
+        margin-bottom: 12px
+
+        &:before
+            position: absolute
+            left: 0
+            bottom: 0
+            width: 100%
+            height: 1px
+            background: linear-gradient(90deg, rgba(217, 217, 217, 0.00) 0%, #D9D9D9 49.48%, rgba(217, 217, 217, 0.00) 100%)
+            content: ''
+
+    &__picture
+        width: 83px
+        height: 83px
+        min-width: 83px
+        border-radius: 50%
+
+        @media ($max-xl)
+            width: 60px
+            height: 60px
+            min-width: 60px
+
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    
+    &__descr
+        width: 100%
+
+    &__row
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 5px
+
+    &__name
+        font-size: 20px
+        font-weight: 700
+        line-height: 1.2
+        margin: 0
+
+        @media ($max-md)
+            font-size: 18px
+    
+    &__wish
+        width: 44px
+        min-width: 44px
+        height: 44px
+        padding: 3px
+
+        @media ($max-md)
+            height: 35px
+            width: 35px
+            min-width: 35px
+
+        &.is-active
+
+            .user-card__wish-icon
+                stroke: var(--red)
+                fill: var(--red)
+
+        &-icon
+            fill: transparent
+            stroke: var(--black)
+            transition: all .5s ease
+
+            @media ($max-md)
+                width: 16px
+                height: 16px
+
+    &__info
+        margin: 0 0 7px
+        padding: 0
+        list-style: none
+        display: flex
+        flex-direction: column
+        gap: 7px
+
+        @media ($max-lg)
+            flex-direction: row
+            gap: 40px
+
+        @media ($max-md)
+            flex-direction: column
+            gap: 7px
+
+        &-item
+            display: flex
+            align-items: center
+            gap: 5px
+            font-weight: 200
+
+            @media ($max-md)
+                font-size: 14px
+        
+        &-icon
+            color: var(--blue)
+
+        &-flag
+            border-radius: 2px
+
+        strong
+            font-weight: 500
+    
+    &__body
+        position: relative
+        padding-bottom: 12px
+        margin-bottom: 12px
+
+        @media ($max-lg)
+            display: flex
+            align-items: flex-start
+            justify-content: space-between
+            gap: 30px
+
+        @media ($max-md)
+            flex-direction: column
+            gap: 10px
+            font-size: 14px
+
+        &:before
+            position: absolute
+            left: 0
+            bottom: 0
+            width: 100%
+            height: 1px
+            background: linear-gradient(90deg, rgba(217, 217, 217, 0.00) 0%, #D9D9D9 49.48%, rgba(217, 217, 217, 0.00) 100%)
+            content: ''
+
+        p
+            margin: 0
+            font-weight: 200
+
+            &:not(:last-child)
+                margin-bottom: 8px
+
+                @media ($max-lg)
+                    margin-bottom: 0
+
+            strong
+                font-weight: 500
+
+    &__sub-title
+        margin: 0 0 5px
+        font-size: 16px
+
+        @media ($max-md)
+            font-size: 14px
+    
+    &__verified
+        display: flex
+        flex-wrap: wrap
+        gap: 10px 60px
+
+        @media ($max-md)
+            gap: 10px 20px
+
+        .check-list__item
+            font-weight: 200
+
+            @media ($max-md)
+                font-size: 14px
+        

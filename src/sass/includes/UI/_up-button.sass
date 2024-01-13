@@ -1,0 +1,35 @@
+.up-button
+    position: fixed
+    bottom: 15px
+    right: 15px
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-left: auto
+    width: 65px
+    height: 65px
+    border-radius: 10px
+    background: none
+    color: var(--black)
+    border: 1px solid var(--black)
+    transition: all .5s ease
+    cursor: pointer
+    z-index: $z-index-3
+    opacity: 0
+    visibility: hidden
+
+    @media ($max-lg)
+        width: 40px
+        height: 40px
+        border-radius: 5px
+
+    &:hover,
+    &:active,
+    &:focus-visible
+        color: var(--white)
+        background: var(--yellow)
+        border-color: var(--yellow)
+
+    &.is-scroll
+        opacity: 1
+        visibility: visible

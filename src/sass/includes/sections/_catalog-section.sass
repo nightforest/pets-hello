@@ -1,0 +1,55 @@
+.catalog-section
+    padding: 0 0 80px
+
+    @media ($max-lg)
+        padding: 20px 0 40px
+
+    &__search
+        margin-top: -60px
+
+        @media ($max-lg)
+            display: none
+
+    &__buttons
+        display: none
+
+        @media ($max-lg)
+            display: flex
+            gap: 15px
+            margin-bottom: 10px
+        
+        @media ($max-md)
+            margin-bottom: 20px
+
+    &__row
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 30px
+
+        @media ($max-lg)
+            display: flex
+            flex-direction: column
+            gap: 0
+    
+    &__sidebar
+        grid-column: 3 span
+    
+    &__article
+        grid-column: 9 span
+    
+    &__list
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 6px
+        margin: 0 0 30px
+        padding: 0
+        list-style: none
+
+        @media ($max-md)
+            margin-bottom: 20px
+    
+    &__item
+        grid-column: 4 span
+
+        @media ($max-sm)
+            grid-column: 6 span

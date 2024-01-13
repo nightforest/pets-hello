@@ -1,0 +1,81 @@
+.recommended-section
+    padding: 70px 0 35px
+    background: linear-gradient(180deg, #E0F4F8 0%, rgba(224, 244, 248, 0.00) 100%), url(../img/bg-paw-right-blue.svg) no-repeat right center
+
+    @media ($max-lg)
+        padding: 40px 0 25px
+
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 30px
+        margin-bottom: 20px
+
+        @media ($max-md)
+            display: block
+
+    &__title
+        
+        @media ($max-md)
+            text-align: center
+
+    &__button
+
+        &--hidden-md
+            
+            @media ($max-md)
+                display: none
+            
+        &--visible-md
+            display: none
+
+            @media ($max-md)
+                display: flex
+                margin: 0 auto
+                max-width: 184px
+
+    &__list
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 6px
+        margin: 0
+        padding: 0
+        list-style: none
+
+        @media ($max-md)
+            margin-bottom: 15px
+    
+    &__item
+        grid-column: 3 span
+
+        @media ($max-lg)
+            grid-column: 4 span
+
+        @media ($max-md)
+            grid-column: 6 span
+    
+    &__advantages
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 30px
+        margin: 75px 0 0
+        padding: 0
+        list-style: none
+
+        @media ($max-md)
+            display: flex
+            flex-direction: column
+    
+    &__advantages-item
+        grid-column: 4 span
+    
+    &--white
+        background: var(--white)
+        padding-bottom: 80px
+
+        @media ($max-lg)
+            padding: 45px 0 60px
+
+        @media ($max-md)
+            padding: 40px 0

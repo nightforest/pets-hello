@@ -1,0 +1,42 @@
+.latest-slider
+    padding: 15px 25px 30px
+
+    @media ($max-md)
+        margin-bottom: 30px
+
+    &__prev,
+    &__next
+        position: absolute
+        top: 50%
+        margin-top: -32px
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 64px
+        height: 64px
+        background: var(--blue)
+        color: var(--white)
+        border-radius: 10px
+        z-index: $z-index-1
+        transition: all .5s ease
+
+        @media ($max-lg)
+            width: 44px
+            height: 44px
+            margin-top: -22px
+            border-radius: 5px
+
+        &.swiper-button-disabled
+            opacity: 0
+            visibility: hidden
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            background: var(--yellow)
+    
+    &__prev
+        left: 5px
+
+    &__next
+        right: 5px

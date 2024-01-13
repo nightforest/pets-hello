@@ -1,0 +1,52 @@
+.contact-section
+    position: relative
+    padding: 65px 0 80px
+    background-color: var(--light-blue)
+    z-index: 0
+
+    @media ($max-lg)
+        padding: 45px 0 60px
+
+    @media ($max-md)
+        padding: 40px 0
+
+    &__left-bg
+        position: absolute
+        left: 0
+        bottom: 0
+        display: flex
+        z-index: -1
+
+        @media ($max-xl)
+            display: none
+
+    &__right-bg
+        position: absolute
+        right: 0
+        bottom: 0
+        display: flex
+        z-index: -1
+
+        @media ($max-xl)
+            display: none
+
+    &__title
+        margin-bottom: 20px
+        text-align: center
+
+    &__form
+        background: var(--white)
+        border-radius: 10px
+        padding: 40px 115px
+        max-width: 890px
+        width: 100%
+        margin: 0 auto
+
+        @media ($max-xl)
+            max-width: 100%
+
+        @media ($max-lg)
+            padding: 40px
+
+        @media ($max-md)
+            padding: 20px

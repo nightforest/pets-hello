@@ -1,0 +1,67 @@
+.header-section
+    display: flex
+    width: 100%
+    position: relative
+    padding: 20px 0
+    min-height: 200px
+    background-image: url(../img/bg-paw-left-white-small.svg), url(../img/bg-paw-right-white.svg)
+    background-repeat: no-repeat, no-repeat
+    background-position: left 5% top 10%, right top 20px
+    background-color: var(--blue)
+    z-index: 0
+
+    @media ($max-lg)
+        padding: 20px 0 25px
+        background-size: 53px auto, 100px auto
+        min-height: 125px
+
+    @media ($max-md)
+        padding: 25px 0
+        min-height: 100px
+
+    &__container
+        flex: 1
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+    &__left-bg
+        position: absolute
+        right: calc(50% + 200px)
+        bottom: 0
+        display: flex
+        z-index: -1
+
+        @media ($max-lg)
+            display: none
+
+    &__right-bg
+        position: absolute
+        left: calc(50% + 200px)
+        bottom: 0
+        display: flex
+        z-index: -1
+
+        @media ($max-lg)
+            display: none
+
+        &--bottom
+            bottom: -54px
+
+    &__title
+        margin: 0 auto 20px
+        max-width: 860px
+        text-align: center
+        line-height: 1.1
+
+        @media ($max-lg)
+            margin-bottom: 15px
+
+        @media ($max-md)
+            margin-bottom: 10px
+
+    &--pb
+        padding-bottom: 80px
+
+        @media ($max-lg)
+            padding-bottom: 25px

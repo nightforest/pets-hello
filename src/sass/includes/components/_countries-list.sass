@@ -1,0 +1,61 @@
+.countries-list
+    margin: 0
+    padding: 0
+    list-style: none
+    line-height: 1
+    column-width: 200px
+    column-count: 4
+    column-gap: 10px
+
+    @media ($max-md)
+        column-width: 150px
+
+    &__item
+        margin-bottom: 25px
+
+        @media ($max-md)
+            margin-bottom: 15px
+    
+    &__link
+        display: inline-flex
+        align-items: center
+        gap: 7px
+        font-size: 20px
+        font-weight: 300
+        color: var(--black)
+        transition: color .5s ease
+
+        @media ($max-lg)
+            font-size: 18px
+        
+        @media ($max-md)
+            font-size: 14px
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--blue)
+
+    &__flag
+        border-radius: 2px
+
+        @media ($max-lg)
+            width: 30px
+            height: 20px
+        
+        @media ($max-md)
+            width: 26px
+            height: 18px
+
+    &--small
+        column-width: 150px
+        
+        .countries-list__link
+            font-size: 14px
+
+        .countries-list__flag
+            width: 26px
+            height: 18px
+
+        .countries-list__item
+            margin-bottom: 15px

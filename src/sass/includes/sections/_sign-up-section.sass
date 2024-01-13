@@ -1,0 +1,45 @@
+.sign-up-section
+    padding: 70px 0
+    background: url(../img/bg-paw-right-white.svg) no-repeat right bottom, url(../img/bg-paw-left-white.svg) no-repeat left top
+    background-color: var(--light-blue)
+
+    @media ($max-lg)
+        padding: 40px 0
+        background: var(--light-blue)
+
+    @media ($max-md)
+        padding: 30px 0 40px
+
+    &__container
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        align-items: center
+        gap: 30px
+
+        @media ($max-lg)
+            gap: 20px
+            align-items: flex-start
+
+        @media ($max-md)
+            display: flex
+            flex-direction: column-reverse
+            align-items: stretch
+
+    &__col
+        grid-column: 6 span
+
+    &__list
+        margin: 0
+        padding: 0
+        list-style: none
+
+    &__item
+
+        &:not(:last-child)
+            margin-bottom: 110px
+
+            @media ($max-lg)
+                margin-bottom: 50px
+
+            @media ($max-md)
+                margin-bottom: 30px

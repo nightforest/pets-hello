@@ -1,0 +1,65 @@
+.accordion
+    border: 1px solid #E2E2E2
+    border-radius: 10px
+    background: var(--white)
+    transition: background .5s ease
+
+    &.is-open
+        background: var(--light-blue)
+
+        .accordion__icon
+            transform: rotateX(180deg)
+
+    &__toggle
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 15px
+        width: 100%
+        text-align: left
+        min-height: 68px
+        padding: 10px 20px
+        border: 0
+        border-radius: 0
+        font-size: 20px
+        font-weight: 600
+        line-height: 1.45
+        color: var(--black)
+        cursor: pointer
+        transition: all .5s ease
+
+        @media ($max-md)
+            font-size: 14px
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--blue)
+
+    &__icon
+        transition: transform .5s ease
+        min-width: 16px
+
+    &__content
+        max-height: 0
+        overflow: hidden
+        will-change: max-height
+        transition: all .5s ease
+        box-sizing: content-box
+
+    &__text
+        border-top: 1px solid #e2e2e2
+        padding: 15px 20px
+        font-size: 20px
+        font-weight: 300
+        line-height: 1.9
+
+        @media ($max-md)
+            font-size: 14px
+
+        p
+            margin: 0 0 1rem
+
+            &:last-child
+                margin-bottom: 0

@@ -1,0 +1,36 @@
+section.contact-section
+    picture.contact-section__left-bg
+        img.contact-section__left-bg-img(src="img/contact-img-1.webp" srcset="img/contact-img-1@2x.webp 2x" loading="lazy" width="532" height="407"  alt="alt")
+
+    picture.contact-section__right-bg
+        img.contact-section__right-bg-img(src="img/contact-img-2.webp" srcset="img/contact-img-2@2x.webp 2x" loading="lazy" width="530" height="502"  alt="alt")
+
+    .container.contact-section__container
+        h2.section-title.contact-section__title Contact 
+            span Our Manager
+
+        form.form.contact-section__form(id="contact-form" autocomplete="off" novalidate="novalidate")
+            .form__row
+                .form__col
+                    input#inputName.input.form__input(type="text" name="inputFirstName" placeholder="First name *" autocomplete="off" required)
+                
+                .form__col
+                    input#inputLastName.input.form__input(type="text" name="inputLastName" placeholder="Last name *" autocomplete="off" required)
+                
+                .form__col
+                    input#inputCompanyName.input.form__input(type="text" name="inputCompanyName" placeholder="Company name *" autocomplete="off" required)
+
+                .form__col
+                    input#inputEmail.input.form__input(type="email" name="inputEmail" placeholder="Email adress *" autocomplete="off" required)
+
+            .form__group
+                textarea#textarea.textarea.form__input(name="message" rows="5" placeholder="Message *" autocomplete="off" required)
+
+            .form__group.form__group--center
+                .checkbox
+                    input.checkbox__input#checkboxAgree(type="checkbox" name="checkbox" value="true" checked required)
+                    label.checkbox__label(for="checkboxAgree") I have read and agree to the 
+                        a.yellow-link(href="#") Privacy Policy
+
+            .form__button-group
+                button.button.form__button Submit

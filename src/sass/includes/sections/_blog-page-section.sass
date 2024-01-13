@@ -1,0 +1,66 @@
+.blog-page-section
+    padding: 65px 0
+
+    @media ($max-lg)
+        padding: 45px 0
+
+    @media ($max-md)
+        padding: 40px 0
+
+    &__date
+        display: flex
+        align-items: center
+        gap: 8px
+        font-size: 16px
+        font-weight: 400
+        margin-bottom: 20px
+
+        @media ($max-md)
+            margin-bottom: 10px
+
+        &-icon
+            color: var(--blue)
+
+    &__text
+        font-size: 16px
+        font-weight: 200
+        line-height: 1.6
+
+        @media ($max-md)
+            font-size: 14px
+
+        &:after
+            content: ""
+            clear: both
+            display: table
+
+        h3
+            font-size: 22px
+            font-weight: 500
+            margin: 1.5rem 0 .5rem
+
+            @media ($max-md)
+                font-size: 18px
+                margin: 1rem 0 .5rem
+
+    &__img
+        border-radius: 10px
+        max-width: 100%
+        height: auto
+
+        @media ($max-lg)
+            max-width: 50%
+
+        &--right
+            float: right
+            margin: 0 0 1rem 2rem
+        
+        &--left
+            float: left
+            margin: 0 2rem 1rem 0
+
+        @media ($max-md)
+            max-width: 100%
+            width: 100%
+            float: none
+            margin: 0 0 1rem

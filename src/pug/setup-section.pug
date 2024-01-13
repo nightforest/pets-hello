@@ -1,0 +1,37 @@
+section.setup-section
+    picture.setup-section__bg
+        img.setup-section__bg-img(src="img/setup-img.webp" srcset="img/setup-img@2x.webp 2x" loading="lazy" width="850" height="754"  alt="alt")
+
+    .container.setup-section__container
+        .setup-section__content
+            form.form.form--white.setup-section__form(id="setup-form" autocomplete="off" novalidate="novalidate")
+                h1.form__title Setup New Password
+
+                .form__group
+                    .form__info Have you already reset the password? 
+                        a.yellow-link(href="#" data-modal="modal-login") Sign in
+                
+                .form__group
+                    input#inputSetupPassword.input.form__input(type="password" name="inputSetupPassword" placeholder="Password *" autocomplete="off" required)
+                
+                .form__group
+                    .form-pass
+                        .form-pass__power(data-pass-power="1")
+                            .form-pass__item
+                            .form-pass__item
+                            .form-pass__item
+                            .form-pass__item
+                            
+                        .form-pass__text Use 8 or more characters with a mix of letters, numbers & symbols
+                
+                .form__group
+                    input#inputConfirmSetupPassword.input.form__input(type="password" name="inputConfirmSetupPassword" placeholder="Repeate Password *" autocomplete="off" required)
+
+                .form__group
+                    .checkbox
+                        input.checkbox__input#checkboxAgreeSetup(type="checkbox" name="checkboxAgreeSetup" value="true" required)
+                        label.checkbox__label(for="checkboxAgreeSetup") I Agree & 
+                            a.yellow-link(href="#") Terms and conditions
+
+                .form__button-group
+                    button.button.form__button.form__button--big Sign up

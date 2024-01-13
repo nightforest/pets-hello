@@ -1,0 +1,22 @@
+section.forgot-section
+    picture.forgot-section__bg
+        img.forgot-section__bg-img(src="img/forgot-img.webp" srcset="img/forgot-img@2x.webp 2x" loading="lazy" width="407" height="716"  alt="alt")
+
+    .container.forgot-section__container
+        .forgot-section__content
+            form.form.form--white.forgot-section__form(id="forgot-form" autocomplete="off" novalidate="novalidate")
+                h1.form__title Forgot password
+                
+                .form__group
+                    input#inputForgotEmail.input.form__input(type="email" name="inputForgotEmail" placeholder="Email adress *" autocomplete="off" required)
+
+                .form__group
+                    .form__info.form__info--small Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.
+
+                .form__group
+                    picture.form__recaptcha
+                        img.form__recaptcha-img(src="img/recaptcha.webp" srcset="img/recaptcha@2x.webp 2x" loading="lazy" width="295" height="77" alt="alt")
+
+                .form__button-group.form__button-group--sb
+                    button.button.button--outline.form__button(type="button") Cancel
+                    button.button.form__button Submit

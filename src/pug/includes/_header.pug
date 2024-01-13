@@ -1,0 +1,37 @@
+header.header
+    .container.header__container
+        .logo.header__logo
+            a.logo__link(href="index.html" aria-label="logo")
+                svg.logo__img.logo__img--hidden-md(width="235" height="37")
+                    use(xlink:href="img/sprite.svg#logo-white")
+                
+                svg.logo__img.logo__img--visible-md(width="70" height="35")
+                    use(xlink:href="img/sprite.svg#logo-mobile-white")
+
+        button.button.button--outline.header__lang-button(type="button" data-modal="modal-country" aria-label="Choose language") EN
+            svg.button__icon(width="16" height="8")
+                use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+        nav.actions.header__actions
+            ul.actions__list
+                li.actions__item.actions__item--hidden-lg
+                    button.actions__button(type="button")
+                        svg.actions__icon(width="32" height="30")
+                            use(xlink:href="img/sprite.svg#messages")
+                        span.actions__title Messages
+
+                li.actions__item
+                    button.actions__button(type="button" data-modal="modal-login")
+                        svg.actions__icon(width="27" height="27")
+                            use(xlink:href="img/sprite.svg#profile")
+                        span.actions__title Profile
+        
+        button.button.header__create-button(type="button")
+            svg.button__icon(width="16" height="16")
+                use(xlink:href="img/sprite.svg#plus")
+            span Create listing
+
+        button.burger.header__burger(type="button" aria-label="Open mobile menu" aria-expanded="false" data-nav-toggle)
+            .burger__line
+            .burger__line
+            .burger__line

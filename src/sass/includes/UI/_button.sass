@@ -1,0 +1,60 @@
+.button
+    position: relative
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    gap: 10px
+    box-sizing: border-box
+    -webkit-tap-highlight-color: transparent
+    outline: none
+    border: none
+    margin: 0
+    cursor: pointer
+    user-select: none
+    vertical-align: middle
+    appearance: none
+    text-decoration: none
+    font-size: 18px
+    font-weight: 700
+    line-height: 1
+    letter-spacing: 0
+    text-align: center
+    height: 65px
+    padding: 5px 30px
+    border-radius: 10px
+    color: var(--black)
+    background: var(--yellow)
+    box-shadow: none
+    transition: background-color .5s ease, border-color .5s ease, color .5s ease
+
+    @media ($max-md)
+        font-size: 16px
+        height: 40px
+
+    &:hover,
+    &:active,
+    &:focus-visible
+        outline: none
+        color: var(--black)
+        background: var(--blue)
+
+    &:disabled
+        background: var(--grey-disabled) !important
+        border-color: var(--grey-disabled) !important
+        color: var(--grey) !important
+        cursor: not-allowed
+
+    &--outline
+        background: transparent
+        border: 2px solid var(--black)
+        z-index: 0
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--black)
+            background: var(--blue)
+            border-color: var(--blue)
+
+    &--light-blue
+        background: var(--light-blue)

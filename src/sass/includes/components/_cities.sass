@@ -1,0 +1,53 @@
+.cities
+    background: var(--light-blue)
+    padding: 40px 50px
+    border-radius: 10px
+
+    @media ($max-lg)
+        padding: 40px
+
+    @media ($max-md)
+        padding: 20px 15px
+
+    &__title
+        margin-bottom: 15px
+        text-align: center
+
+        @media ($max-md)
+            margin-bottom: 5px
+
+    &__list
+        margin: 0
+        padding: 0
+        list-style: none
+        column-width: 200px
+        column-count: 4
+        column-gap: 10px
+
+        @media ($max-md)
+            column-width: 120px
+
+    &__item
+
+        @media ($max-md)
+            text-align: center
+
+        &:not(:last-child)
+            margin-bottom: 7px
+
+            @media ($max-md)
+                margin-bottom: 5px
+
+    &__link
+        font-size: 16px
+        font-weight: 300
+        color: var(--black)
+        transition: color .5s ease
+
+        @media ($max-md)
+            font-size: 12px
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--yellow)

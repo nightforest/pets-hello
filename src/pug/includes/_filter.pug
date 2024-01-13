@@ -1,0 +1,153 @@
+.filter
+    .filter__sidebar
+        button.filter__close(type="button" aria-label="Close filter" data-filter-close)
+            svg.filter__close-icon(width="19" height="19")
+                use(xlink:href="img/sprite.svg#close-modal")
+
+        .filter__inner
+            h2.filter__title Cat breed
+
+            .filter-block
+                .filter-block__body
+                    select#filterSelect.select.filter__select(name="filterSelect" aria-label="Select" required)
+                        option(value="") Select
+                        option(value="1") Cats
+                        option(value="2") Dogs
+                        option(value="3") Horses
+                        option(value="4") Other Pets
+                        option(value="5") Accessoires
+                        option(value="6") Pet Food
+                        option(value="7") Service
+                        option(value="8") Lost Animal
+
+            .filter-block
+                h3.filter-block__title Stud service
+                
+                .filter-block__body
+                    .switch.filter__switch
+                        input.switch__input#switch-1(type="checkbox" name="switch-1" value="true" checked)
+                        label.switch__label(for="switch-1") Stud Service
+
+            .filter-block
+                h3.filter-block__title Cat age
+                
+                .filter-block__body
+                    .radio.filter__radio
+                        input.radio__input#radio-1(type="radio" name="radio-1" value="true" required)
+                        label.radio__label(for="radio-1") Kittens (Below 12 Months)
+                    
+                    .radio.filter__radio
+                        input.radio__input#radio-2(type="radio" name="radio-1" value="true" checked required)
+                        label.radio__label(for="radio-2") Adult Cats (12 Months and More)
+
+            .filter-block
+                h3.filter-block__title VACCINATED AND CHIPPED
+                
+                .filter-block__body
+                    .switch.filter__switch
+                        input.switch__input#switch-2(type="checkbox" name="switch-2" value="true" checked)
+                        label.switch__label(for="switch-2") Vaccinated and Chipped
+            
+            .filter-block
+                h3.filter-block__title СASTRATED
+                
+                .filter-block__body
+                    .switch.filter__switch
+                        input.switch__input#switch-3(type="checkbox" name="switch-3" value="true" checked)
+                        label.switch__label(for="switch-3") СASTRATED
+
+            .filter-block
+                h3.filter-block__title ALL CATEGORIES
+                
+                .filter-block__body
+                    ul.filter-menu
+                        li.filter-menu__item
+                            a.filter-menu__link(href="#") Cats
+                        li.filter-menu__item
+                            a.filter-menu__link(href="#") Dogs
+                        li.filter-menu__item
+                            a.filter-menu__link(href="#") Horses
+                        li.filter-menu__item
+                            a.filter-menu__link(href="#") Other Pets
+                        li.filter-menu__item
+                            a.filter-menu__link(href="#") Accessoires
+                        li.filter-menu__item
+                            a.filter-menu__link(href="#") Pet Food
+                        li.filter-menu__item
+                            a.filter-menu__link(href="#") Service
+                        li.filter-menu__item
+                            a.filter-menu__link(href="#") Lost Animals
+
+            .filter-block
+                h3.filter-block__title LOCATIONS
+                
+                .filter-block__body
+                    ul.filter-menu
+                        li.filter-menu__item
+                            a.filter-menu__link(href="#") London
+                        li.filter-menu__item
+                            a.filter-menu__link(href="#") Birmingham
+                        li.filter-menu__item
+                            a.filter-menu__link(href="#") Liverpool
+                        li.filter-menu__item
+                            a.filter-menu__link(href="#") Sheffield
+                        li.filter-menu__item
+                            a.filter-menu__link(href="#") Bristol
+                        li.filter-menu__item
+                            a.filter-menu__link(href="#") Glasgow
+                        li.filter-menu__item
+                            a.filter-menu__link(href="#") Leicester
+                        li.filter-menu__item
+                            a.filter-menu__link(href="#") Edinburgh
+                        li.filter-menu__item.is-hidden
+                            a.filter-menu__link(href="#") Bristol
+                        li.filter-menu__item.is-hidden
+                            a.filter-menu__link(href="#") Glasgow
+                        li.filter-menu__item.is-hidden
+                            a.filter-menu__link(href="#") Leicester
+                        li.filter-menu__item.is-hidden
+                            a.filter-menu__link(href="#") Edinburgh
+
+                    button.filter__more(type="button" data-filter-more) View More (4)
+
+            .filter-block
+                h3.filter-block__title DATE POSTED
+                
+                .filter-block__body
+                    .radio.filter__radio
+                        input.radio__input#radio-2-1(type="radio" name="radio-2" value="true" checked required)
+                        label.radio__label(for="radio-2-1") 3 days ago
+                    
+                    .radio.filter__radio
+                        input.radio__input#radio-2-2(type="radio" name="radio-2" value="true" required)
+                        label.radio__label(for="radio-2-2") 1 week ago
+                    
+                    .radio.filter__radio
+                        input.radio__input#radio-2-3(type="radio" name="radio-2" value="true" required)
+                        label.radio__label(for="radio-2-3") 1 month ago
+                    
+                    .radio.filter__radio
+                        input.radio__input#radio-2-4(type="radio" name="radio-2" value="true" required)
+                        label.radio__label(for="radio-2-4") 6 months ago
+                    
+                    .radio.filter__radio
+                        input.radio__input#radio-2-5(type="radio" name="radio-2" value="true" required)
+                        label.radio__label(for="radio-2-5") 1 year ago
+
+            .filter-block.filter-block--mb-10
+                h3.filter-block__title Price range
+
+                .filter-block__body
+                    .range
+                        input.range__input#range-input(type="text" data-slider-min="0" data-slider-max="10000" data-slider-step="1" data-slider-value="[2000, 8000]")
+                    
+                    .range-form
+                        .range-form__group
+                            input.range-form__input#range-min(type="text" value="2000" min="0" max="10000" required)
+                        
+                        .range-form__group
+                            input.range-form__input#range-max(type="text" value="8000" min="0" max="10000" required)
+
+            .filter__buttons-group
+                button.button.filter__button(type="button") GO
+                button.button.button--outline.filter__button(type="button") Clear

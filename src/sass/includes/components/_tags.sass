@@ -1,0 +1,37 @@
+.tags
+    display: flex
+    flex-wrap: wrap
+    gap: 15px
+    margin: 0 0 20px
+    padding: 0
+    list-style: none
+
+    @media ($max-md)
+        display: none
+
+    &__item
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 15px
+        height: 54px
+        background: var(--yellow)
+        border-radius: 10px
+        color: var(--black)
+        font-size: 16px
+        line-height: 1.2
+        padding: 5px 20px
+    
+    &__remove
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 14px
+        height: 14px
+        min-width: 14px
+        transition: color .5s ease
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--blue)

@@ -1,0 +1,46 @@
+.latest-section
+    padding: 35px 0 70px
+    background: url(../img/bg-paw-left-blue.svg) no-repeat left bottom
+
+    @media ($max-lg)
+        padding: 25px 0 50px
+
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 30px
+        margin-bottom: 5px
+
+        @media ($max-md)
+            display: block
+
+    &__title
+
+        @media ($max-md)
+            text-align: center
+
+    &__button
+
+        &--hidden-md
+            
+            @media ($max-md)
+                display: none
+            
+        &--visible-md
+            display: none
+
+            @media ($max-md)
+                display: flex
+                margin: 0 auto
+                max-width: 184px
+
+    &--blue
+        background-color: var(--light-blue)
+        padding: 70px 0
+
+        @media ($max-lg)
+            padding: 50px 0
+
+        @media ($max-md)
+            padding: 40px 0

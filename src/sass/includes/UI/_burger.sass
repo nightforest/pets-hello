@@ -1,0 +1,65 @@
+.burger
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: center
+    width: 65px
+    min-width: 65px
+    height: 65px
+    padding: 5px 17px
+    line-height: 1
+    gap: 6px
+    color: var(--blue)
+    border: 2px solid var(--black)
+    border-radius: 10px
+    transition: all .5s ease
+
+    @media ($max-md)
+        width: 40px
+        height: 40px
+        min-width: 40px
+        border-radius: 5px
+        border-width: 1px
+        padding: 4px 9px
+        gap: 3px
+
+    &:hover,
+    &:active,
+    &:focus-visible
+        background: var(--blue)
+        border-color: var(--blue)
+
+    &.is-active
+
+        .burger__line
+
+            &:nth-child(1)
+                transform: rotate(45deg) translate(6px, 6px)
+
+                @media ($max-md)
+                    transform: rotate(45deg) translate(4px, 4px)
+
+            &:nth-child(2)
+                opacity: 0
+
+            &:nth-child(3)
+                transform: rotate(-45deg) translate(5px, -5px)
+
+                @media ($max-md)
+                    transform: rotate(-45deg) translate(3px, -3px)
+    
+    &__line
+        width: 28px
+        height: 2px
+        border-radius: 2px
+        background: var(--black)
+        transition: all .5s ease
+
+        @media ($max-md)
+            width: 20px
+
+        &:nth-child(2)
+            width: 18px
+
+            @media ($max-md)
+                width: 15px

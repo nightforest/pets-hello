@@ -1,0 +1,89 @@
+.sitemap
+
+    &__list
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 30px 15px
+        margin: 0
+        padding: 0
+        list-style: none
+
+        @media ($max-md)
+            gap: 10px
+
+    &__item
+        grid-column: 3 span
+
+        @media ($max-lg)
+            grid-column: 4 span
+
+        @media ($max-md)
+            grid-column: 6 span
+
+        &:nth-child(4)
+
+            @media ($max-lg)
+                order: 8
+
+    &__link
+        display: inline-flex
+        align-items: center
+        gap: 6px
+        color: var(--black)
+        font-size: 24px
+        font-weight: 700
+        line-height: 1.2
+        transition: color .5s ease
+
+        @media ($max-md)
+            font-size: 14px
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--blue)
+    
+    &__picture
+        display: flex
+        width: 44px
+        height: 44px
+        min-width: 44px
+
+        @media ($max-md)
+            width: 32px
+            height: 32px
+            min-width: 32px
+    
+    &__img
+        width: 100%
+        height: auto
+
+    &__sub
+        margin: 0
+        padding: 0 0 0 50px
+        list-style: none
+
+        @media ($max-md)
+            padding-left: 38px
+
+        &-item
+
+            &:not(:last-child)
+                margin-bottom: 5px
+
+                @media ($max-md)
+                    margin-bottom: 0
+
+        &-link
+            font-size: 16px
+            font-weight: 300
+            color: var(--black)
+            transition: color .5s ease
+
+            @media ($max-md)
+                font-size: 12px
+
+            &:hover,
+            &:active,
+            &:focus-visible
+                color: var(--blue)

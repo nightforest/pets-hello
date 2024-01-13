@@ -1,0 +1,49 @@
+.steps-card
+    display: flex
+    align-items: center
+    gap: 25px
+
+    @media ($max-lg)
+        flex-direction: column
+        text-align: center
+        gap: 20px
+
+    &__picture
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 138px
+        height: 138px
+        min-width: 138px
+        background: var(--white)
+        border-radius: 10px
+
+        @media ($max-lg)
+            width: 100px
+            height: 100px
+            min-width: 100px
+
+    &__img
+        
+        @media ($max-lg)
+            width: 82px
+            height: 82px
+
+    &__title
+        margin: 0 0 10px
+        font-size: 24px
+        font-weight: 600
+
+        @media ($max-lg)
+            font-size: 20px
+
+    &__descr
+        font-size: 18px
+        font-weight: 200
+        margin: 0
+
+        @media ($max-lg)
+            font-size: 16px
+
+        @media ($max-md)
+            font-size: 14px

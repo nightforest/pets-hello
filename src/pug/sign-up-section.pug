@@ -1,0 +1,99 @@
+section.sign-up-section
+    .container.sign-up-section__container
+        .sign-up-section__col
+            ul.sign-up-section__list
+                li.sign-up-section__item
+                    .steps-card
+                        picture.steps-card__picture
+                            img.steps-card__img(src="img/steps-icon-1.webp" srcset="img/steps-icon-1@2x.webp 2x" loading="lazy" width="112" height="112" alt="alt")
+                            
+                        .steps-card__content
+                            h3.steps-card__title Create New Listing
+                            p.steps-card__descr Do you have something to sell, to rent, any service to offer or a job offer? Post it at Pet 4 You, its free, for local business and very easy to use!
+
+                li.sign-up-section__item
+                    .steps-card
+                        picture.steps-card__picture
+                            img.steps-card__img(src="img/steps-icon-2.webp" srcset="img/steps-icon-2@2x.webp 2x" loading="lazy" width="112" height="112" alt="alt")
+                            
+                        .steps-card__content
+                            h3.steps-card__title Create and Manage Items
+                            p.steps-card__descr Become a best seller or buyer. Create and Manage your listings. Repost your old listings, etc.
+                
+                li.sign-up-section__item
+                    .steps-card
+                        picture.steps-card__picture
+                            img.steps-card__img(src="img/steps-icon-3.webp" srcset="img/steps-icon-3@2x.webp 2x" loading="lazy" width="112" height="112" alt="alt")
+                            
+                        .steps-card__content
+                            h3.steps-card__title Create your favorite listings list
+                            p.steps-card__descr Create your favorite listings list. And save your search. Don't forget any deal.
+        
+        .sign-up-section__col
+            form.form.form--white(id="sign-up-form" autocomplete="off" novalidate="novalidate")
+                h1.form__title Sign up
+                
+                ul.form-social
+                    li.form-social__item
+                        a.form-social__link(href="#")
+                            svg.form-social__icon(width="24" height="24")
+                                use(xlink:href="img/sprite.svg#google")
+                            span Google
+                    
+                    li.form-social__item
+                        a.form-social__link(href="#")
+                            svg.form-social__icon(width="24" height="24")
+                                use(xlink:href="img/sprite.svg#apple")
+                            span Apple
+                    
+                    li.form-social__item
+                        a.form-social__link(href="#")
+                            svg.form-social__icon(width="24" height="24")
+                                use(xlink:href="img/sprite.svg#facebook-2")
+                            span Facebook
+
+                .form__line
+                    span.form__line-text or with email
+
+                .form__group
+                    input#inputName.input.form__input(type="text" name="inputName" placeholder="Name *" autocomplete="off" required)
+
+                .form__group
+                    input#inputEmail.input.form__input(type="email" name="inputEmail" placeholder="Email adress *" autocomplete="off" required)
+                
+                .form__group
+                    input#inputPassword.input.form__input(type="password" name="inputPassword" placeholder="Password *" autocomplete="off" required)
+                
+                .form__group
+                    .form-pass
+                        .form-pass__power(data-pass-power="1")
+                            .form-pass__item
+                            .form-pass__item
+                            .form-pass__item
+                            .form-pass__item
+                            
+                        .form-pass__text Use 8 or more characters with a mix of letters, numbers & symbols
+                
+                .form__group
+                    input#inputConfirmPassword.input.form__input(type="password" name="inputConfirmPassword" placeholder="Repeate Password *" autocomplete="off" required)
+
+                .form__group
+                    picture.form__recaptcha
+                        img.form__recaptcha-img(src="img/recaptcha.webp" srcset="img/recaptcha@2x.webp 2x" loading="lazy" width="295" height="77" alt="alt")
+                    
+                .form__group
+                    .checkbox
+                        input.checkbox__input#checkboxAgree(type="checkbox" name="checkboxAgree" value="true" required)
+                        label.checkbox__label(for="checkboxAgree") I have read and agree to the 
+                            a.yellow-link(href="privacy.html") Privacy Policy
+
+                .form__group
+                    .checkbox
+                        input.checkbox__input#checkboxAccept(type="checkbox" name="checkboxAccept" value="true" required)
+                        label.checkbox__label(for="checkboxAccept") I accept to receive news
+
+                .form__group
+                    button.button.form__button.form__button--big Sign up
+
+                .form__info Already have an account? 
+                    a.yellow-link(href="#" data-modal="modal-login") Sign in

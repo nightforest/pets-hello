@@ -1,0 +1,329 @@
+section.catalog-section
+    .container.catalog-section__container
+        .search.catalog-section__search
+            form.search__form(id="search-form" autocomplete="off" novalidate="novalidate")
+                .search__group
+                    select#selectCategory.select.search__input(name="selectCategory" aria-label="Category" required)
+                        option(value="") Category
+                        option(value="1") Cats
+                        option(value="2") Dogs
+                        option(value="3") Horses
+                        option(value="4") Other Pets
+                        option(value="5") Accessoires
+                        option(value="6") Pet Food
+                        option(value="7") Service
+                        option(value="8") Lost Animal
+
+                .search__group
+                    input#inputWhat.input.search__input(type="text" name="inputWhat" placeholder="What?" autocomplete="off" required)
+
+                .search__group
+                    input#inputWhere.input.input--location.search__input(type="text" name="inputWhere" placeholder="Where?" autocomplete="off" required)
+
+                .search__group
+                    button.button.search__button Search
+                        svg.button__icon(width="22" height="22")
+                            use(xlink:href="img/sprite.svg#search")
+        
+        .catalog-section__buttons
+            button.button.button--light-blue.filter-toggle(type="button" data-filter-toggle) Filters
+            button.button.search-toggle(type="button" data-modal="modal-search")
+                svg.button__icon(width="22" height="22")
+                    use(xlink:href="img/sprite.svg#search")
+
+        ul.tags
+            li.tags__item Cats
+                button.tags__remove(type="button") 
+                    svg.tags__remove-icon(width="14" height="14" aria-label="Remove tag")
+                        use(xlink:href="img/sprite.svg#close-modal")
+            
+            li.tags__item Stud Service
+                button.tags__remove(type="button") 
+                    svg.tags__remove-icon(width="14" height="14" aria-label="Remove tag")
+                        use(xlink:href="img/sprite.svg#close-modal")
+            
+            li.tags__item Kittens (Below 12 Months)
+                button.tags__remove(type="button") 
+                    svg.tags__remove-icon(width="14" height="14" aria-label="Remove tag")
+                        use(xlink:href="img/sprite.svg#close-modal")
+                
+        .catalog-section__row
+            aside.catalog-section__sidebar
+                include ./includes/_filter.pug
+
+            article.catalog-section__article
+                ul.catalog-section__list
+                    li.catalog-section__item
+                        a.product-card(href="#")
+                            picture.product-card__picture
+                                img.product-card__img(src="img/product-img-1.webp" srcset="img/product-img-1@2x.webp 2x" loading="lazy" width="255" height="202"  alt="alt")
+                            
+                            .product-card__tag Top
+
+                            .product-card__content
+                                ul.product-card__info
+                                    li.product-card__info-item
+                                        svg.product-card__info-flag(width="22" height="14")
+                                            use(xlink:href="img/flags.svg#gb")
+                                        | England
+                                    
+                                    li.product-card__info-item
+                                        svg.product-card__info-icon(width="14" height="18")
+                                            use(xlink:href="img/sprite.svg#location")
+                                        | Sheffield
+
+                                h3.product-card__title Gorgeous Cockapoo Girl
+                                .product-card__price 120 $
+
+                    li.catalog-section__item
+                        a.product-card(href="#")
+                            picture.product-card__picture
+                                img.product-card__img(src="img/product-img-2.webp" srcset="img/product-img-2@2x.webp 2x" loading="lazy" width="255" height="202"  alt="alt")
+                            
+                            .product-card__content
+                                ul.product-card__info
+                                    li.product-card__info-item
+                                        svg.product-card__info-flag(width="22" height="14")
+                                            use(xlink:href="img/flags.svg#austria")
+                                        | Austria
+                                    
+                                    li.product-card__info-item
+                                        svg.product-card__info-icon(width="14" height="18")
+                                            use(xlink:href="img/sprite.svg#location")
+                                        | Sheffield
+
+                                h3.product-card__title Gorgeous Cockapoo Girl
+                                .product-card__price 120 $
+                                
+                    li.catalog-section__item
+                        a.product-card(href="#")
+                            picture.product-card__picture
+                                img.product-card__img(src="img/product-img-3.webp" srcset="img/product-img-3@2x.webp 2x" loading="lazy" width="255" height="202"  alt="alt")
+                            
+                            .product-card__tag Top
+
+                            .product-card__content
+                                ul.product-card__info
+                                    li.product-card__info-item
+                                        svg.product-card__info-flag(width="22" height="14")
+                                            use(xlink:href="img/flags.svg#belgium")
+                                        | Belgium
+                                    
+                                    li.product-card__info-item
+                                        svg.product-card__info-icon(width="14" height="18")
+                                            use(xlink:href="img/sprite.svg#location")
+                                        | Sheffield
+
+                                h3.product-card__title Gorgeous Cockapoo Girl
+                                .product-card__price 120 $
+
+                    li.catalog-section__item
+                        a.product-card(href="#")
+                            picture.product-card__picture
+                                img.product-card__img(src="img/product-img-1.webp" srcset="img/product-img-1@2x.webp 2x" loading="lazy" width="255" height="202"  alt="alt")
+                            
+                            .product-card__tag Top
+
+                            .product-card__content
+                                ul.product-card__info
+                                    li.product-card__info-item
+                                        svg.product-card__info-flag(width="22" height="14")
+                                            use(xlink:href="img/flags.svg#gb")
+                                        | England
+                                    
+                                    li.product-card__info-item
+                                        svg.product-card__info-icon(width="14" height="18")
+                                            use(xlink:href="img/sprite.svg#location")
+                                        | Sheffield
+
+                                h3.product-card__title Gorgeous Cockapoo Girl
+                                .product-card__price 120 $
+
+                    li.catalog-section__item
+                        a.product-card(href="#")
+                            picture.product-card__picture
+                                img.product-card__img(src="img/product-img-2.webp" srcset="img/product-img-2@2x.webp 2x" loading="lazy" width="255" height="202"  alt="alt")
+                            
+                            .product-card__content
+                                ul.product-card__info
+                                    li.product-card__info-item
+                                        svg.product-card__info-flag(width="22" height="14")
+                                            use(xlink:href="img/flags.svg#austria")
+                                        | Austria
+                                    
+                                    li.product-card__info-item
+                                        svg.product-card__info-icon(width="14" height="18")
+                                            use(xlink:href="img/sprite.svg#location")
+                                        | Sheffield
+
+                                h3.product-card__title Gorgeous Cockapoo Girl
+                                .product-card__price 120 $
+                                
+                    li.catalog-section__item
+                        a.product-card(href="#")
+                            picture.product-card__picture
+                                img.product-card__img(src="img/product-img-3.webp" srcset="img/product-img-3@2x.webp 2x" loading="lazy" width="255" height="202"  alt="alt")
+                            
+                            .product-card__tag Top
+
+                            .product-card__content
+                                ul.product-card__info
+                                    li.product-card__info-item
+                                        svg.product-card__info-flag(width="22" height="14")
+                                            use(xlink:href="img/flags.svg#belgium")
+                                        | Belgium
+                                    
+                                    li.product-card__info-item
+                                        svg.product-card__info-icon(width="14" height="18")
+                                            use(xlink:href="img/sprite.svg#location")
+                                        | Sheffield
+
+                                h3.product-card__title Gorgeous Cockapoo Girl
+                                .product-card__price 120 $
+
+                    li.catalog-section__item
+                        a.product-card(href="#")
+                            picture.product-card__picture
+                                img.product-card__img(src="img/product-img-1.webp" srcset="img/product-img-1@2x.webp 2x" loading="lazy" width="255" height="202"  alt="alt")
+                            
+                            .product-card__tag Top
+
+                            .product-card__content
+                                ul.product-card__info
+                                    li.product-card__info-item
+                                        svg.product-card__info-flag(width="22" height="14")
+                                            use(xlink:href="img/flags.svg#gb")
+                                        | England
+                                    
+                                    li.product-card__info-item
+                                        svg.product-card__info-icon(width="14" height="18")
+                                            use(xlink:href="img/sprite.svg#location")
+                                        | Sheffield
+
+                                h3.product-card__title Gorgeous Cockapoo Girl
+                                .product-card__price 120 $
+
+                    li.catalog-section__item
+                        a.product-card(href="#")
+                            picture.product-card__picture
+                                img.product-card__img(src="img/product-img-2.webp" srcset="img/product-img-2@2x.webp 2x" loading="lazy" width="255" height="202"  alt="alt")
+                            
+                            .product-card__content
+                                ul.product-card__info
+                                    li.product-card__info-item
+                                        svg.product-card__info-flag(width="22" height="14")
+                                            use(xlink:href="img/flags.svg#austria")
+                                        | Austria
+                                    
+                                    li.product-card__info-item
+                                        svg.product-card__info-icon(width="14" height="18")
+                                            use(xlink:href="img/sprite.svg#location")
+                                        | Sheffield
+
+                                h3.product-card__title Gorgeous Cockapoo Girl
+                                .product-card__price 120 $
+                                
+                    li.catalog-section__item
+                        a.product-card(href="#")
+                            picture.product-card__picture
+                                img.product-card__img(src="img/product-img-3.webp" srcset="img/product-img-3@2x.webp 2x" loading="lazy" width="255" height="202"  alt="alt")
+                            
+                            .product-card__tag Top
+
+                            .product-card__content
+                                ul.product-card__info
+                                    li.product-card__info-item
+                                        svg.product-card__info-flag(width="22" height="14")
+                                            use(xlink:href="img/flags.svg#belgium")
+                                        | Belgium
+                                    
+                                    li.product-card__info-item
+                                        svg.product-card__info-icon(width="14" height="18")
+                                            use(xlink:href="img/sprite.svg#location")
+                                        | Sheffield
+
+                                h3.product-card__title Gorgeous Cockapoo Girl
+                                .product-card__price 120 $
+
+                    li.catalog-section__item
+                        a.product-card(href="#")
+                            picture.product-card__picture
+                                img.product-card__img(src="img/product-img-1.webp" srcset="img/product-img-1@2x.webp 2x" loading="lazy" width="255" height="202"  alt="alt")
+                            
+                            .product-card__tag Top
+
+                            .product-card__content
+                                ul.product-card__info
+                                    li.product-card__info-item
+                                        svg.product-card__info-flag(width="22" height="14")
+                                            use(xlink:href="img/flags.svg#gb")
+                                        | England
+                                    
+                                    li.product-card__info-item
+                                        svg.product-card__info-icon(width="14" height="18")
+                                            use(xlink:href="img/sprite.svg#location")
+                                        | Sheffield
+
+                                h3.product-card__title Gorgeous Cockapoo Girl
+                                .product-card__price 120 $
+
+                    li.catalog-section__item
+                        a.product-card(href="#")
+                            picture.product-card__picture
+                                img.product-card__img(src="img/product-img-2.webp" srcset="img/product-img-2@2x.webp 2x" loading="lazy" width="255" height="202"  alt="alt")
+                            
+                            .product-card__content
+                                ul.product-card__info
+                                    li.product-card__info-item
+                                        svg.product-card__info-flag(width="22" height="14")
+                                            use(xlink:href="img/flags.svg#austria")
+                                        | Austria
+                                    
+                                    li.product-card__info-item
+                                        svg.product-card__info-icon(width="14" height="18")
+                                            use(xlink:href="img/sprite.svg#location")
+                                        | Sheffield
+
+                                h3.product-card__title Gorgeous Cockapoo Girl
+                                .product-card__price 120 $
+                                
+                    li.catalog-section__item
+                        a.product-card(href="#")
+                            picture.product-card__picture
+                                img.product-card__img(src="img/product-img-3.webp" srcset="img/product-img-3@2x.webp 2x" loading="lazy" width="255" height="202"  alt="alt")
+                            
+                            .product-card__tag Top
+
+                            .product-card__content
+                                ul.product-card__info
+                                    li.product-card__info-item
+                                        svg.product-card__info-flag(width="22" height="14")
+                                            use(xlink:href="img/flags.svg#belgium")
+                                        | Belgium
+                                    
+                                    li.product-card__info-item
+                                        svg.product-card__info-icon(width="14" height="18")
+                                            use(xlink:href="img/sprite.svg#location")
+                                        | Sheffield
+
+                                h3.product-card__title Gorgeous Cockapoo Girl
+                                .product-card__price 120 $
+                                
+                nav.pagenav.news-section__pagenav(aria-label="Page navigation")
+                    ul.pagenav__list
+                        li.pagenav__item
+                            a.pagenav__arrow(href="#" aria-label="Previous")
+                                svg.pagenav__icon(width="6" height="12")
+                                    use(xlink:href="img/sprite.svg#arrow-left")
+                        li.pagenav__item.is-active(aria-current="page")
+                            a.pagenav__link(href="#") 1
+                        li.pagenav__item
+                            a.pagenav__link(href="#") 2
+                        li.pagenav__item
+                            span ...
+                        li.pagenav__item
+                            a.pagenav__link(href="#") 7
+                        li.pagenav__item
+                            a.pagenav__arrow(href="#" aria-label="Next")
+                                svg.pagenav__icon(width="6" height="12")
+                                    use(xlink:href="img/sprite.svg#arrow-right")

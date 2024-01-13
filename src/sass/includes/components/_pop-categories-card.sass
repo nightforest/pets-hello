@@ -1,0 +1,71 @@
+.pop-categories-card
+    background: var(--white)
+    border: 1px solid #E2E2E2
+    height: 100%
+    border-radius: 10px
+    overflow: hidden
+
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        background: var(--blue)
+        padding: 0 15px 0 25px
+
+        @media ($max-lg)
+            padding: 12px 15px
+
+        @media ($max-md)
+            padding: 10px 15px
+    
+    &__title
+        margin: 0
+        color: var(--white)
+        font-size: 24px
+        font-weight: 600
+
+        @media ($max-lg)
+            font-size: 20px
+
+        @media ($max-md)
+            font-size: 16px
+
+    &__img
+
+        @media ($max-lg)
+            width: 44px
+            height: 44px
+
+        @media ($max-md)
+            width: 38px
+            height: 38px
+    
+    &__body
+        padding: 15px 25px
+
+        @media ($max-lg)
+            padding: 15px
+
+        @media ($max-md)
+            padding: 10px 15px
+    
+    &__list
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 8px 16px
+        margin: 0
+        padding: 0
+        list-style: none
+
+        @media ($max-md)
+            gap: 5px
+    
+    &__item
+        grid-column: 6 span
+    
+    &__link
+        color: var(--black)
+        transition: color .5s ease
+
+        @media ($max-lg)
+            font-size: 12px

@@ -1,0 +1,47 @@
+.setup-section
+    position: relative
+    padding: 160px 0
+    background: url(../img/bg-paw-right-white.svg) no-repeat right bottom, url(../img/bg-paw-left-white.svg) no-repeat left top
+    background-color: var(--light-blue)
+
+    @media ($max-lg)
+        padding: 80px 0
+        
+    @media ($max-md)
+        padding: 40px 0
+        background: var(--light-blue)
+
+    &__content
+        max-width: 50%
+        margin-left: auto
+
+        @media ($max-md)
+            max-width: 100%
+
+    &__form
+        position: relative
+        padding: 90px 30px
+
+        @media ($max-lg)
+            padding: 40px 30px 30px
+
+        @media ($max-md)
+            padding: 40px 15px 50px
+    
+    &__bg
+        position: absolute
+        left: 0
+        bottom: 0
+        display: flex
+        justify-content: flex-end
+        width: 60%
+
+        @media ($max-lg)
+            width: 70%
+
+        @media ($max-md)
+            display: none
+
+        &-img
+            max-width: 100%
+            height: auto
